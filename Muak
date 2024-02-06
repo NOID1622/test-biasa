@@ -19,3 +19,8 @@ public class Terkecil {
         System.out.println("The smallest number is: " + smallest);
     }
 }
+
+
+D:\sargio_RPLBO\untitled\src>java Terkecil 5 3 10 1 4 2
+Error: Could not find or load main class Terkecil
+Caused by: java.lang.ClassNotFoundException: Terkecil
