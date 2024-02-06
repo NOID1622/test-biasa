@@ -1,0 +1,21 @@
+public class Terkecil {
+
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Please provide numbers as arguments.");
+            return;
+        }
+
+        int smallest = Integer.MAX_VALUE;
+        for (String arg : args) {
+            try {
+                int number = Integer.parseInt(arg);
+                smallest = Math.min(smallest, number);
+            } catch (NumberFormatException e) {
+                System.err.println("Invalid input: " + arg);
+            }
+        }
+
+        System.out.println("The smallest number is: " + smallest);
+    }
+}
