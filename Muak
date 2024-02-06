@@ -24,3 +24,21 @@ public class Terkecil {
 D:\sargio_RPLBO\untitled\src>java Terkecil 5 3 10 1 4 2
 Error: Could not find or load main class Terkecil
 Caused by: java.lang.ClassNotFoundException: Terkecil
+
+public class Terkecil {
+
+    public static void main(String[] args) {
+        int terkecil = Integer.MAX_VALUE;
+
+        // Membaca bilangan dari parameter
+        for (String arg : args) {
+            int bilangan = Integer.parseInt(arg);
+            if (bilangan < terkecil) {
+                terkecil = bilangan;
+            }
+        }
+
+        // Menampilkan bilangan terkecil
+        System.out.println("Bilangan terkecil adalah " + terkecil);
+    }
+}
