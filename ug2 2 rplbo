@@ -18,3 +18,64 @@ public class UG3Soal2
     }
 
 }
+
+
+
+nnnnn
+package com.ug3.soal2;
+
+import java.util.Scanner;
+
+public class UG3Soal2 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Meminta input dua kata dari user
+        System.out.println("Masukkan kata pertama: ");
+        String firstWord = scanner.nextLine();
+        System.out.println("Masukkan kata kedua: ");
+        String secondWord = scanner.nextLine();
+
+        // Menghitung jumlah huruf dari masing-masing kata
+        int n1 = firstWord.length();
+        int n2 = secondWord.length();
+
+        // Menampilkan jumlah huruf dari masing-masing kata sebagai output
+        System.out.println("Jumlah huruf dari kata pertama: " + n1);
+        System.out.println("Jumlah huruf dari kata kedua: " + n2);
+
+        // Memanggil metode fibonacci dengan jumlah huruf dari masing-masing kata
+        fibonacci(n1, n2);
+
+        // Menawarkan user untuk keluar dari program
+        System.out.println("Ketik 'exit' untuk keluar dari program: ");
+        String input = scanner.nextLine();
+        if (input.equalsIgnoreCase("exit")) {
+            System.out.println("Terima kasih telah menggunakan program ini!");
+            System.exit(0);
+        } else {
+            System.out.println("Input tidak valid. Silakan coba lagi.");
+            main(args);
+        }
+    }
+
+    public static void fibonacci(int n1, int n2) {
+        // Menginisialisasi variabel untuk menyimpan bilangan Fibonacci
+        int fibNum1 = n1;
+        int fibNum2 = n2;
+        int fibNum;
+
+        // Menampilkan dua bilangan Fibonacci pertama
+        System.out.println("Bilangan Fibonacci:");
+        System.out.print(fibNum1 + " " + fibNum2 + " ");
+
+        // Menghitung dan menampilkan 8 bilangan Fibonacci berikutnya
+        for (int i = 2; i < 10; i++) {
+            fibNum = fibNum1 + fibNum2;
+            System.out.print(fibNum + " ");
+            fibNum1 = fibNum2;
+            fibNum2 = fibNum;
+        }
+    }
+}
