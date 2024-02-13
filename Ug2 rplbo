@@ -81,3 +81,25 @@ public class UGSoal1 {
     }
 }
 
+ggggggg
+public void absen(String name, String date, String time) {
+    // Mendapatkan tanggal dan waktu saat ini
+    Date now = new Date();
+    SimpleDateFormat sdf = new SimpleDateFormat("dd-MMMM-yyyy HH:mm:ss");
+    String currentDate = sdf.format(now);
+
+    // Membandingkan tanggal dan waktu yang diinput dengan tanggal dan waktu saat ini
+    if (date.equals(currentDate.substring(0, 10)) && time.equals(currentDate.substring(11, 19))) {
+        // Menampilkan pesan absensi berhasil
+        System.out.println("**Berhasil absensi**");
+        System.out.println("Atas nama : " + name);
+        System.out.println("Pada tanggal : " + date);
+        System.out.println("Pukul : " + time);
+    } else {
+        // Menampilkan pesan absensi gagal
+        System.out.println("**Absensi gagal**");
+        System.out.println("Tanggal atau waktu yang diinput tidak sesuai dengan tanggal dan waktu saat ini.");
+        System.out.println("Tanggal dan waktu saat ini: " + currentDate);
+    }
+}
+
