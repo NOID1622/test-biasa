@@ -1,30 +1,20 @@
 package com.ug3.soal2;
 
-public class UG3Soal2 {
-    public static void main(String[] args) {
+import java.util.Scanner;
+public class UG3Soal2
+{
+    public static void main( String[] args ) {
+        
         // panggil fungsi fibonacci disini
+        
     }
 
-    public static void fibonacci(String firstWord, String secondWord) {
-        // Hitung jumlah huruf dari masing-masing kata
-        int n1 = firstWord.length();
-        int n2 = secondWord.length();
+    public static void fibonacci(
+            String firstWord,
+            String secondWord
 
-        // Tampilkan jumlah huruf dari masing-masing kata sebagai output
-        System.out.println("Jumlah huruf dari kata pertama: " + n1);
-        System.out.println("Jumlah huruf dari kata kedua: " + n2);
-
-        // Panggil metode fibonacci dengan jumlah huruf dari masing-masing kata
-        int fibNum1 = n1;
-        int fibNum2 = n2;
-        int fibNum;
-        System.out.println("Bilangan Fibonacci:");
-        System.out.print(fibNum1 + " " + fibNum2 + " ");
-        for (int i = 2; i < 10; i++) {
-            fibNum = fibNum1 + fibNum2;
-            System.out.print(fibNum + " ");
-            fibNum1 = fibNum2;
-            fibNum2 = fibNum;
-        }
+    ){
+        // tulis kode anda disini
     }
+
 }
