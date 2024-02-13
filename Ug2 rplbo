@@ -120,6 +120,7 @@ public class UGSoal1 {
 
 
 fffffffff
+
 package com.ug3.soal1;
 
 import java.text.SimpleDateFormat;
@@ -152,8 +153,15 @@ public class UGSoal1 {
 
     public void absen(String name, String date, String time) {
         // Menampilkan hasil output
-        System.out.println("Berhasil absensi");
-        System.out.println("Karyawan " + name);
+        System.out.println("Berhasil presensi");
+
+        // Cek jika nama adalah string atau nama orang
+        if (name.matches("[a-zA-Z]+")) {
+            System.out.println("Karyawan " + name);
+        } else {
+            System.out.println("Output selain nama orang: " + name);
+        }
+
         System.out.println("Pada tanggal: " + date);
         System.out.println("Pukul " + time);
     }
