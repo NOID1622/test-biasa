@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+public class AbsensiKaryawan {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Memasukkan input nama karyawan
+        System.out.print("Masukkan nama karyawan: ");
+        String namaKaryawan = scanner.nextLine();
+        
+        // Mendapatkan waktu absensi
+        LocalTime waktuAbsensi = LocalTime.now();
+        
+        // Format waktu absensi
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String waktuAbsensiFormatted = waktuAbsensi.format(formatter);
+        
+        // Menampilkan hasil output
+        System.out.println("Karyawan " + namaKaryawan + " melakukan absensi pada pukul " + waktuAbsensiFormatted);
+        
+        // Jangan lupa untuk menutup scanner
+        scanner.close();
+    }
+}
