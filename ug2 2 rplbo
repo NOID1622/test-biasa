@@ -18,3 +18,53 @@ public class UG3Soal2
     }
 
 }
+
+
+nnnnnnn
+package com.ug3.soal2;
+
+import java.util.Scanner;
+
+public class UG3Soal2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input dua kata yang berbeda melalui console
+        System.out.print("Masukkan kata pertama: ");
+        String firstWord = scanner.nextLine();
+
+        System.out.print("Masukkan kata kedua: ");
+        String secondWord = scanner.nextLine();
+
+        // Hitung jumlah huruf dari masing-masing kata
+        int n1 = firstWord.length();
+        int n2 = secondWord.length();
+
+        // Tampilkan jumlah huruf dari masing-masing kata sebagai output
+        System.out.println("Jumlah huruf dari kata pertama: " + n1);
+        System.out.println("Jumlah huruf dari kata kedua: " + n2);
+
+        // Panggil fungsi fibonacci dengan jumlah huruf dari masing-masing kata
+        fibonacci(n1, n2);
+
+        // Menutup scanner
+        scanner.close();
+    }
+
+    public static void fibonacci(int n1, int n2) {
+        int firstNum = n1;
+        int secondNum = n2;
+        int fibNum;
+
+        // Tampilkan bilangan Fibonacci
+        System.out.println("Bilangan Fibonacci:");
+        System.out.print(firstNum + " " + secondNum + " ");
+
+        for (int i = 2; i < 10; i++) {
+            fibNum = firstNum + secondNum;
+            System.out.print(fibNum + " ");
+            firstNum = secondNum;
+            secondNum = fibNum;
+        }
+    }
+}
