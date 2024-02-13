@@ -118,3 +118,44 @@ public class UGSoal1 {
 }
 
 
+
+fffffffff
+package com.ug3.soal1;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class UGSoal1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Memasukkan input nama karyawan
+        System.out.print("Masukkan nama karyawan: ");
+        String name = scanner.nextLine();
+
+        // Mendapatkan tanggal absensi
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+        String date = dateFormat.format(new Date());
+
+        // Mendapatkan waktu absensi
+        SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
+        String time = timeFormat.format(new Date());
+
+        // Memanggil fungsi absen
+        UGSoal1 absensi = new UGSoal1();
+        absensi.absen(name, date, time);
+
+        // Menutup scanner
+        scanner.close();
+    }
+
+    public void absen(String name, String date, String time) {
+        // Menampilkan hasil output
+        System.out.println("Berhasil absensi");
+        System.out.println("Karyawan " + name);
+        System.out.println("Pada tanggal: " + date);
+        System.out.println("Pukul " + time);
+    }
+}
+
