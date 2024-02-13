@@ -82,24 +82,39 @@ public class UGSoal1 {
 }
 
 ggggggg
-public void absen(String name, String date, String time) {
-    // Mendapatkan tanggal dan waktu saat ini
-    Date now = new Date();
-    SimpleDateFormat sdf = new SimpleDateFormat("dd-MMMM-yyyy HH:mm:ss");
-    String currentDate = sdf.format(now);
+package com.ug3.soal1;
 
-    // Membandingkan tanggal dan waktu yang diinput dengan tanggal dan waktu saat ini
-    if (date.equals(currentDate.substring(0, 10)) && time.equals(currentDate.substring(11, 19))) {
-        // Menampilkan pesan absensi berhasil
-        System.out.println("**Berhasil absensi**");
-        System.out.println("Atas nama : " + name);
-        System.out.println("Pada tanggal : " + date);
-        System.out.println("Pukul : " + time);
-    } else {
-        // Menampilkan pesan absensi gagal
-        System.out.println("**Absensi gagal**");
-        System.out.println("Tanggal atau waktu yang diinput tidak sesuai dengan tanggal dan waktu saat ini.");
-        System.out.println("Tanggal dan waktu saat ini: " + currentDate);
+import java.util.Scanner;
+import java.time.LocalTime;
+import java.util.Date;
+import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+public class UGSoal1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Masukkan nama karyawan: ");
+        String namaKaryawan = scanner.nextLine();
+
+
+        LocalTime waktuAbsensi = LocalTime.now();
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+        String date = dateFormat.format(new Date());
+
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+        String waktuAbsensiFormatted = waktuAbsensi.format(formatter);
+
+
+        System.out.println("berhasil absensi");
+        System.out.println("Karyawan " + namaKaryawan);
+        System.out.println("pada tanggal: " +date );
+        System.out.println("pukul " + waktuAbsensiFormatted);
+
+        scanner.close();
     }
 }
+
 
